@@ -1,0 +1,16 @@
+# POST http://localhost:3040/api/v1/articles/create 
+# Content-Type: application/json
+
+# {
+#     "title": "one", "content" : "this is the first test"
+# }
+
+POST http://localhost:3040/api/v1/articles/create
+Content-Type: application/json
+
+{
+
+    "title":"three", "content":"this is the third one"
+
+
+}
