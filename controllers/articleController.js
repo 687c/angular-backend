@@ -16,4 +16,26 @@ const createArticle = async (articleObject) => {
     return savedArticle;
 }
 
-module.exports = { createArticle, getAllArticles }
+const updateArticle = (filter, update) => {
+    //find the article
+    const updatedArticle = Article.findOneAndUpdate(filter, update, {
+        new: true
+    });
+    return updatedArticle;
+}
+
+const deleteArticle = (filter) => {
+    //get the id
+    Article.findOneAndDelete(filter, (err, docs) => {
+        if (err) {
+            console.error("encountered error deleting record -> ", err)
+        }
+        console.log("deleted record", docs);
+    });
+}
+
+const deleteManyArticles = filter => {
+    Article.deleteMany(filter)
+}
+
+module.exports = { createArticle, deleteArticle, getAllArticles, updateArticle }

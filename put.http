@@ -1,0 +1,11 @@
+
+
+PUT http://localhost:3040/api/v1/articles/
+Content-Type: application/json
+
+{
+
+    "title":"four", "content":"this is an update to the fourth one"
+
+
+}
