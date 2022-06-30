@@ -1,5 +1,6 @@
-// const DB = 'mongodb://mongo:27017/articles';
-const DB = 'mongodb+srv://fullstack_tutorial:PpRudjYepdQ5XdFD@cluster0.zogjd.mongodb.net/TasksDB?retryWrites=true&w=majority';
+require('dotenv').config();
+
+const DB = process.env.MONGO_URI;
 
 const PORT = 3040;
 

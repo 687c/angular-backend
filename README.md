@@ -10,6 +10,7 @@ to see all the categories go to `http://localhost:3040/api/v1/category/`
 
 to create a task use the route `http://localhost:3040/api/v1/task/create` and POST the body object containing the title and message
 `{ title: "<YOUR TITLE HERE>", message: "<YOUR MESSAGE HERE>", category: "<YOUR CATEGORY HERE>" }`
+
 the categories consists of `todo` `priority` `cooking` and `maybe`
 
 to list all categories use the route `http://localhost:3040/api/v1/category`
