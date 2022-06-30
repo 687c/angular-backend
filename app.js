@@ -4,7 +4,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const config = require('./utils/config');
-const articleRouter = require('./routes/articleRoute');
+// const helloRoute = require('./routes/helloRoute');
+const taskRoute = require('./routes/taskRoute');
+const categoryRoute = require('./routes/categoryRoute');
 
 //app
 const app = express();
@@ -15,7 +17,9 @@ app.use(express.json());
 app.use(morgan('tiny'));
 
 //routes
-app.use('/api/v1/articles', articleRouter);
+// app.use('/api/v1/hello', helloRoute);
+app.use('/api/v1/task', taskRoute);
+app.use('/api/v1/category', categoryRoute);
 
 // app.get('/', function (req, res) {
 //     res.json({ "hello": "world" });

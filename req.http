@@ -5,12 +5,13 @@
 #     "title": "one", "content" : "this is the first test"
 # }
 
-POST http://localhost:3040/api/v1/articles/create
+POST http://localhost:3040/api/v1/task/create
 Content-Type: application/json
 
 {
 
-    "title":"five", "content":"this is the fifth one"
-
+    "title":"laundry 2.0",
+    "message" : "clean clothes maketh the man",
+    "category" : "priority"
 
 }
